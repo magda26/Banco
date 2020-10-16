@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Banco">
+			<and mandatory="true" name="Operaciones">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="Listado_operaciones"/>
+				<feature mandatory="true" name="Consultar_saldo"/>
+				<feature mandatory="true" name="Retiro"/>
+				<and name="Adicionales">
+					<feature name="Transferencias"/>
+					<feature name="Consignaciones"/>
+				</and>
+			</and>
+			<feature name="Saldo_reducido"/>
+			<feature name="Registro_audit"/>
+		</and>
+	</struct>
+</featureModel>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature name="Banco"/>
+	<feature name="Operaciones"/>
+	<feature name="Listado_operaciones"/>
+	<feature name="Consultar_saldo"/>
+	<feature name="Retiro"/>
+	<feature name="Adicionales"/>
+	<feature name="Transferencias"/>
+	<feature name="Consignaciones"/>
+	<feature name="Saldo_reducido"/>
+	<feature name="Registro_audit"/>
+</configuration>
