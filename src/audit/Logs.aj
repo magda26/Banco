@@ -4,15 +4,15 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public aspect Logs {
-	pointcut login() : call( * cajero.main.isValid(..));
+	pointcut login() : call( * cajero.Banco.login(..));
 	
-	after() returning(boolean isValid): login() {
+	after() returning(boolean login): login() {
 
-		if(isValid) {
+		if(login) {
 	        Properties datos = new Properties( );
             FileInputStream input;
             try {
-				input = new FileInputStream( "data/config.properties" );
+            	input = new FileInputStream( "data/config.properties" );
 		        datos.load( input );
 		        if(Boolean.parseBoolean(datos.getProperty("custom_logs"))) {
 					System.out.println("Se guarda la fecha y la hora de ingreso del usuario en el custom log");

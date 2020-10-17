@@ -6,22 +6,20 @@ public class Cuenta {
 		this.saldo=saldo;
 	}
 	
-	
 	public int getSaldo() {
 		return saldo;
 	}
-
 
 	public void setSaldo(int saldo) {
 		this.saldo = saldo;
 	}
 
-
-	public int consultarSaldo() {
-		return saldo;
-	}
-	public int retirarDinero(int valor) {
-		return this.saldo-valor;
+	public int retirarDinero(int valor,boolean saldoReducido) {
+		if(saldoReducido && saldo-valor <200000 || saldo-valor<0) {
+			return -1;
+		}
+		this.saldo -=valor;
+		return this.saldo;
 	}
 	public boolean transferir(String cedula, int valor) {
 		return true;
